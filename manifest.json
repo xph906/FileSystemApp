@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "file_handlers": {
+      "text": {
+         "types": [ "text/*" ]
+      }
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYrqYmYp/JRWlRRbmktiosTIWuu16boFihlPUAPSAhVJRS+jjR0ONuasH7SEKNAZ7ujvXG6ReQk0qNKuyGZVo1ESCLVZpSxQLFpaNcphiJukL3GCmoBPV5UFw6uYosMfZGXyz2qmo1DbsaDDhhAKmBUOW/AtliDgiILN3+p3dIQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "30",
+   "name": "Filesystem Access Example",
+   "permissions": [ {
+      "fileSystem": [ "write", "retainEntries" ]
+   }, "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3"
+}
