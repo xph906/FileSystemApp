@@ -149,10 +149,10 @@ chooseFileButton.addEventListener('click', function(e) {
 saveAsFileButton.addEventListener('click', function(e) {
   var config = {type: 'saveFile', suggestedName: chosenFileEntry.name};
   chrome.fileSystem.chooseEntry(config, function(writableEntry) {
-    //var blob = new Blob([textarea.value], {type: 'text/plain'});
-    var blob = new Blob([launchData.resultArr], {type: 'text/plain'});
+    var blob = new Blob([textarea.value], {type: 'text/plain'});
+    //var blob = new Blob([launchData.resultArr], {type: 'text/plain'});
     writeFileEntry(writableEntry, blob, function(e) {
-      output.textContent = 'Write complete :)';
+      output.textContent = 'Textarea write complete :)';
     });
   });
 });
@@ -165,7 +165,7 @@ saveFileButton.addEventListener('click', function(e) {
         if (chosenEntry) {
           var blob = new Blob([launchData.resultArr], {type: 'text/plain'});
           writeFileEntry(chosenEntry, blob, function(e) {
-            output.textContent = 'Write complete :)';
+            output.textContent = launchData.firstURL+' write complete :)';
           });
         }
       });
