@@ -24,7 +24,7 @@ chrome.runtime.onConnectExternal.addListener(function(port) {
 			console.log("contents: "+msg.resultArr);
 			
 			chrome.app.window.create('index.html', function(win) {
-				win.contentWindow.launchData = msg;
+				win.contentWindow.reqData = msg;
 			});
 			/*var config = {type: 'saveFile', suggestedName: "timingFile"};
 			chrome.fileSystem.chooseEntry(config, 
